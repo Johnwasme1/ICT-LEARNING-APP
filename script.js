@@ -10,15 +10,15 @@ function UnitOfCompetency1() {
 }
 
 function UnitOfCompetency2() {
-    window.location.href = 'UC2.html'; 
+    window.location.href = 'UC2.HTML'; 
 }
 
 function UnitOfCompetency3() {
-    window.location.href = 'UC3.html'; 
+    window.location.href = 'UC3.HTML'; 
 }
 
 function UnitOfCompetency4() {
-    window.location.href = 'UC4.html'; 
+    window.location.href = 'UC4.HTML'; 
 }
 
 function QUIZ1() {

@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson Page</title>
     <link rel="stylesheet" href="lesson.css">
-    <a href="lesson.html" class="back-button"><span>&#60;</span></a>
 </head>
 <body>
-    
+  <div class="centered-header">
+    <div>
+    <header class="header" id="header">
+    <h3>CSS LESSON: Unit of Competency 2</h3>
+    <a href="lesson.html" class="back-button2"></span>Back</a>
+    <a href="#" class="back-button">&#8679;</a>
+        </div>
+  </header>
     <main>
         <section class="lesson-content">
             <h2>Unit of Competency 2:     Setup Computer Network </h2>
@@ -71,11 +77,23 @@
 
 
     </main>
+    <script>
+      let lastScrollTop = 0;
+      
+      window.addEventListener("scroll", () => {
+          const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+          const header = document.getElementById("header");
+      
+          if (currentScroll > lastScrollTop) {
+              // Scroll down
+              header.style.top = "-70px"; // Hide the header when scrolling down
+          } else {
+              // Scroll up
+              header.style.top = "0"; // Show the header when scrolling up
+          }
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      });
+          </script>
 
-
-
-
-    
-    <script src="script.js"></script>
 </body>
 </html>

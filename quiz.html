@@ -4,15 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson Page</title>
-    <link rel="stylesheet" href="lesson.css">
+
 </head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #bdc3c7, #2c3e50); 
+    background-image: url('Background.JPG');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to right, #393c3d, #2f3531); 
+    background-color: #333; /* Example background color for header */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000; 
+
+}
+
+.main {
+    padding: 5px;
+}
+.centered-paragraph {
+    text-align: center;
+    margin-bottom: 20px; 
+}  
+h2 {
+
+    font-size: xx-large;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: rgb(14, 226, 233); 
+    margin: 0 auto;   
+}
+h1 {
+    font-size: xx-large;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: rgb(31, 62, 63); 
+    margin: 0 auto;   
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.buttons button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(98, 1, 255);
+    color: #fff;
+    font-size: 2em; 
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.back-button {
+    display: ruby-base-container;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    top: 10px;
+    left: 20px;
+    position: absolute;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+button {
+    padding: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    z-index: 1000;
+    margin-top: 100px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); 
+}
+</style>
 <body>
     <body background="Background.JPG">
-    
+    <header>
+        <H1>Test Your Knowledge</H1>
+        <a href="index.html" class="back-button"></span>Back</a>
+    </header>
     <main>
-        <div class="centered-paragraph">
-            <p>TEST YOUR KNOWLEDGE</p>
-        </div>
     </div>
     <div class="buttons">
        
@@ -24,7 +137,6 @@
 
     </main>
 
-    <a href="index.html" class="back-button"><span>&#60;</span></a>
 
 
     

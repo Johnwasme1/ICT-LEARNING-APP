@@ -12,15 +12,28 @@
   <body background="Background.JPG">
 
     <div class="centered-header">
-    <header>
-      <a href="lesson.html" class="back-button"><span>&#60;</span></a>
-        <h1>CSS LESSON</h1>
+      <div>
+      <header class="header" id="header">
+      <h3>CSS LESSON: Unit of Competency 1</h3>
+      <a href="lesson.html" class="back-button2"></span>Back</a>
+      <a href="#" class="back-button">&#8679;</a>
+          </div>
     </header>
 </div>
     <main>
         <section class="lesson-content">
-            <h2>Unit of Competency 1: Install and Configure Computer Systems </h2>
+            <h1>Unit of Competency 1: Install and Configure Computer Systems </h1>
+            <div class="container">
+              <div class="navigation">
+                <h3><a href="#learning-outcome-1">Learning Outcome No.1: Assemble Computer Hardware</a></h3>
+                <h3><a href="#learning-outcome-2">Learning Outcome No.2: Prepare installer</a></h3>
+                <h3><a href="#learning-outcome-3">Learning Outcome No.3: Install operating system and drivers for peripherals/devices</a></h3>
+                <h3><a href="#learning-outcome-4">Learning Outcome No.4: Install application software</a></h3>
+              </div>
 
+            <div id="learning-outcome-1" class="content"></div>
+
+            <h2>Learning Outcome No.1: Assemble Computer Hardware</h2>
             <p><strong>OCCUPATIONAL HEALTH AND SAFETY (OHS)</strong></p>
 
             <p>Information Sheet 1.1-1</p>
@@ -396,13 +409,54 @@
       <li><strong>K Modem:</strong> A device used to send digital data over a phone line, essential for internet access or email communication.</li>
     </ul>
   </li>
-  <p><strong>LEARNING OUTCOME NO. 2  
+  <div id="learning-outcome-2" class="content"></div>
+  <h2>Learning Outcome No.2: Prepare installer </h2>
     </strong></p> 
 <p><strong> Prepare Installer </strong></p>
-<p>PREPARE INSTALLER USING RUFUS 
-    Add the ISO files and follow the instruction. Make sure the Flash Drive is connected.
-     All files in flash drive will be deleted
-    </p>
+<p>PREPARE INSTALLER USING RUFUS </p>
+<p><strong>Bootable Drive</strong></p>
+<p>A bootable drive is any piece of hardware that can read or contains the files required for a computer to start. For example, a hard drive, floppy disk drive, CD-ROM drive, DVD drive, and USB jump drive are all considered bootable devices.</p>
+
+<p><strong>Rufus</strong></p>
+<p>Rufus is a utility that helps format and create bootable USB flash drives, such as USB keys/pendrives, memory sticks, etc.</p>
+
+<p><strong>ISO Image File</strong></p>
+<p>An ISO image file, or ISO file, is the image of an entire CD or DVD, containing the complete contents of the optical disc in a single file. It is produced by copying all information from the disc.</p>
+
+<p><strong>Windows File Systems</strong></p>
+<ul>
+  <li><strong>FAT (File Allocation Table):</strong> Created by Microsoft in 1977, FAT is a file system maintained by the operating system on a hard disk, providing a map of clusters where a file is stored.</li>
+  <li><strong>NTFS (New Technology File System):</strong> Used by the Windows NT operating system for storing and retrieving files on a hard disk. NTFS offers improvements over FAT in terms of performance, extendibility, and security.</li>
+</ul>
+
+<p><strong>Partition Table Formats</strong></p>
+<ul>
+  <li><strong>Master Boot Record (MBR) format:</strong> In use since the early 1980s, MBR supports a maximum of four primary partitions up to 2TB in size.</li>
+  <li><strong>GUID Partition Table (GPT) format:</strong> Newer and supports much larger disks, up to a theoretical limit of 9.4 zettabytes (ZB) or nearly 10 billion terabytes. Windows currently limits GPT partitions to 256TB.</li>
+</ul>
+
+<p><strong>Requirements for Creating a Bootable Drive</strong></p>
+<ul>
+  <li>Windows 10 in ISO format</li>
+  <li>Rufus software for creating the bootable drive</li>
+  <li>USB flash drive (at least 4GB)</li>
+  <li>Desktop computer</li>
+</ul>
+
+     <img src="https://imgur.com/bBprnzz" alt="Steps Bootable drive" class="centered-image">
+     <img src="https://imgur.com/aUNjjkW" alt="Steps Bootable drive" class="centered-image">
+     <img src="https://imgur.com/OYwIWGI" alt="Steps Bootable drive" class="centered-image">
+     <img src="https://imgur.com/NeXdDCP" alt="Steps Bootable drive" class="centered-image">
+     <img src="https://imgur.com/D6BPo2Q" alt="Steps Bootable drive" class="centered-image">
+
+<div id="learning-outcome-3" class="content"></div>
+<h2>Learning Outcome No.3: Install operating system and drivers for peripherals/ devices </h2>
+     <p><strong>Steps in Installing Operating System</strong></p>
+  <p><strong>Steps in Installing Drivers</strong></p>
+
+  <div id="learning-outcome-4" class="content"></div>
+
+  <h2>Learning Outcome No.4: Install application software</h2>
 
 </ol>
 
@@ -412,10 +466,22 @@
 
     </main>
 
+    <script>
+let lastScrollTop = 0;
 
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const header = document.getElementById("header");
 
-
-    
-    <script src="script.js"></script>
+    if (currentScroll > lastScrollTop) {
+        // Scroll down
+        header.style.top = "-70px"; // Hide the header when scrolling down
+    } else {
+        // Scroll up
+        header.style.top = "0"; // Show the header when scrolling up
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+    </script>
 </body>
 </html>
